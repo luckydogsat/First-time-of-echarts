@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/echarts.min.js" ></script>
+		<title>2020各手机公司利润</title>
+		
+	</head>
+	<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+
+        option = {
+		    xAxis: {
+		        type: 'category',
+		        data: ['Huawei', 'Apple', 'Xiaomi', 'Samsung', 'Vivo', 'Oppo', 'Others']
+		    },
+		    yAxis: {
+		        type: 'value'
+		    },
+		    series: [{
+		        data: [13.2, 14.4, 9.2, 21.9, 6.0, 8.2, 27.0],
+		        type: 'bar'
+		    }]
+		};
+        myChart.setOption(option);
+		option = {
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['Huawei', 'Apple', 'Xiaomi', 'Samsung', 'Vivo', 'Oppo', 'Others']
+		axisLabel: {
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line',
+        areaStyle: {}
+    }]
+};
+    </script>
+</body>
+</html>
